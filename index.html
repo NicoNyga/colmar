@@ -14,7 +14,7 @@
     <!-- nav-bar section -->
     <header>
         <nav>
-            <div>
+            <div class="nav-bar">
                 <div class="home-button">
                     <p>
                         <img src="resources/images/ic-logo.svg" alt="colmar logo">
@@ -35,10 +35,10 @@
     <main>
         <!-- start section -->
         <div class="banner">
-            <div class="image-container"><img src="resources/images/banner.jpg" alt="students sitting outdoors reading"></div>
+            <div class="image-container"><img id="students" src="resources/images/banner.jpg" alt="students sitting outdoors reading"></div>
             <div class="text-container">
-                <h2></h2>
-                <h3></h3>
+                <h1>Learn something new everyday</h1>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                 <div class="button">
                     <p>Start here</p>
                 </div>
@@ -49,41 +49,57 @@
         <div class="quote-event">
             
             <!-- quote section (desktop only) -->
-            <div class="quote-container desktop-only">
-                <div class="image-container"><img src="resources/images/information-main.jpg" alt="another student sitting outdoors reading"></div>
-                <h2>It doesn't hurt to keep practicing</h2>
-                <p>'qoute in latin gibberish' 
-                    <span>Emanuel, Sr Strategist at Hiring.com</span>
-                </p>
+            <div class="quote-container-desktop-only">
+                <img id="reader" src="resources/images/information-main.jpg" alt="another student sitting outdoors reading">
+                <div class="text-container">
+                    <h1>It doesn't hurt to keep practicing</h1>
+                    <p id="quote">'Vestibulum volutpat posuere arcu non ultricies. 
+                        Nunc tincidunt mauris sed odio posuere facilisis. 
+                        Phasellus ante eros, rhoncus a enim in, bibendum rutrum ante. 
+                        Vestibulum rhoncus convallis porttitor. 
+                        Duis faucibus mauris nec tellus consequat porttitor. Suspendisse potenti.' 
+                    </p>
+                    <p id="credit">Emanuel, Sr Strategist at Hiring.com</p>
+    
+                </div>
             </div>
             <!-- events section (desktop and mobile) -->
             <div class="event-container">
                 <div class="event">
-                    <div class="image-container">
-                        <img src="resources/images/information-orientation.jpg" alt="skyview of people running">
-                    </div>
+                    <!-- <div class="image-container">
+                    </div> -->
+                    <img id="eventimage" src="resources/images/information-orientation.jpg" alt="skyview of people running">
+
                     <div class="infotext">
-                        <h3>Orientation date</h3>
-                        <p></p>
-                        <p></p>
+                        <div class="textwrap">
+                            <h3>Orientation date</h3>
+                            <p>Tue 10/11 & Wen 10/12: 8am-3pm</p>
+                            <p><a href="">read more</a></p>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="event">
-                    <div class="image-container"><img src="resources/images/information-campus.jpg" alt="inside campus"></div>
+                    <!-- <div class="image-container"></div> -->
+                    <img id="eventimage" src="resources/images/information-campus.jpg" alt="inside campus">
                     <div class="infotext">
-                        <h3>Our campus</h3>
-                        <p></p>
-                        <p></p>
+                        <div class="textwrap">
+                            <h3>Our campus</h3>
+                            <p>Find which campus is close by you</p>
+                            <p><a href="">read more</a></p>
+                        </div>
                     </div>
                 </div>
                 <div class="event">
-                    <div class="image-container">
-                        <img src="resources/images/information-guest-lecture.jpg" alt="Oliver Sack">
-                    </div>
+                    <!-- <div class="image-container">
+                    </div> -->
+                    <img id="eventimage" src="resources/images/information-guest-lecture.jpg" alt="Oliver Sack">
                     <div class="infotext">
-                        <h3>Our guest lecture</h3>
-                        <p></p>
-                        <p></p>
+                        <div class="textwrap">
+                            <h3>Our guest lecture</h3>
+                            <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+                            <p><a href="">read more</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,43 +108,43 @@
 
         <!-- courses section (desktop and mobile) -->
         <div class="courses-container">
-            <h2>Start learning</h2>
+            <h2 class="sectionheading">Start learning</h2>
             <div class="course-flex">
                 <div class="course">
-                    <div class="image-container"></div>
+                    <img class="courseimg" src="resources/images/course-software.jpg" alt="">
                     <h3>Software engineering</h3>
-                    <h4></h4>
-                    <p></p>
+                    <h4>COURSES</h4>
+                    <p>Web Development, Mobile Development, iOT, APIs</p>
                 </div>
                 <div class="course">
-                    <div class="image-container"></div>
+                    <img class="courseimg" src="resources/images/course-computer-art.jpg" alt="">
                     <h3>Computer art</h3>
-                    <h4></h4>
-                    <p></p>
+                    <h4>COURSES</h4>
+                    <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
                 </div>
                 <div class="course">
-                    <div class="image-container"></div>
+                    <img class="courseimg" src="resources/images/course-design.jpg" alt="">
                     <h3>Design</h3>
-                    <h4></h4>
-                    <p></p>
+                    <h4>COURSES</h4>
+                    <p>User Experience, User Research, Visual Design</p>
                 </div>
                 <div class="course">
-                    <div class="image-container"></div>
+                    <img class="courseimg" src="resources/images/course-data.jpg" alt="">
                     <h3>Data</h3>
-                    <h4></h4>
-                    <p></p>
+                    <h4>COURSES</h4>
+                    <p>Data Science, Big Data, SQL, Data Visualization</p>
                 </div>
                 <div class="course">
-                    <div class="image-container"></div>
+                    <img class="courseimg" src="resources/images/course-business.jpg" alt="">
                     <h3>Business</h3>
-                    <h4></h4>
-                    <p></p>
+                    <h4>COURSES</h4>
+                    <p>Product Development, Business Development, Startup</p>
                 </div>
                 <div class="course">
-                    <div class="image-container"></div>
+                    <img class="courseimg" src="resources/images/course-marketing.jpg" alt="">
                     <h3>Marketing</h3>
-                    <h4></h4>
-                    <p></p>
+                    <h4>COURSES</h4>
+                    <p>Analytics, Content Marketing, Mobile Marketing</p>
                 </div>
 
             </div>
@@ -136,7 +152,7 @@
         <!-- thesis exhibit (desktop and mobile) -->
         <div class="exhibit-container">
             <div class="video-container">
-                <div class="video"></div>
+                <div class="video"><video src="resources/videos/thesis.mp4" autoplay></video></div>
                 <h3>Reimagine urban</h3>
                 <p></p>
             </div>
