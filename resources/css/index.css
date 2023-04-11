@@ -5,37 +5,41 @@ body {
     margin: 0;
 }
 
+body .mobile {
+    display: none;
+}
 p, h1, h2, h3, h4 {
     opacity: .8;
 }
 
 .sectionheading {
-    width: 100%;
     text-align: center;
     margin-top: 0;
     margin-bottom: 16px;
 }
 
+nav .desktop {
+    display: flex;
+    height: 64px;
+    padding: 0 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .home-button img {
+    display: inline;
         vertical-align: middle;
 
 }
 
 .home-button p {
+    display: inline;
     line-height: 32px;
     text-align: center;
 }
 
 .home-button span {
     font-weight: 700;
-}
-
-.nav-bar {
-    display: flex;
-    height: 64px;
-    padding: 0 24px;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .menu-list ul {
@@ -55,24 +59,27 @@ p, h1, h2, h3, h4 {
     background-color: lightgray;
     display: flex;
     align-items: center;
-    padding: 32px 24px;
+    padding: 32px 0 32px 0;
 }
 
 .banner .image-container {
-max-width: 60%; 
-overflow: hidden;
+    flex: 0 1 1152px;
+    overflow: hidden;
+    margin-left: 24px;
+    min-width: 60%;
 }
 
 #students {
     width: 100%;
+    height: auto;
 }
 
 .banner .text-container {
+    flex: 0 1 768px;
     display: flex;
-    min-width: 0;
     flex-direction: column;
     margin-left: 24px;
-    width: 25%;
+    padding-right: 16px;
 }
 
 .button {
@@ -86,7 +93,6 @@ overflow: hidden;
 
 .quote-event, .exhibit-container {
     display: flex;
-    padding-left: 24px;
     padding-bottom: 32px;
     margin-top: 16px;
     align-items: flex-start;
@@ -96,16 +102,16 @@ overflow: hidden;
 .quote-container, .video-container {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    min-width: 215px;
+    flex: 0 1 1152px;
+    min-width: 60%;
     overflow: hidden;
-    margin-right: 24px;
-    flex-shrink: 2;
+    margin-left: 24px;
     padding-top: 16px;
 }
 
 #reader, video {
     width: 100%;
+    height: auto;
 }
 
 #credit {
@@ -118,31 +124,37 @@ overflow: hidden;
 .event-container, .desktop-only-container {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    min-width: 433px;
+    margin-left: 24px;
+    flex: 0 1 768px;
+    padding-right: 34px;
+
 }
 
+.event:hover, .exhibit:hover {
+    background-color: lightgray;
+}
 .event, .exhibit {
     display: flex;
+    flex: 0 1;
     padding: 16px;
     border: 2px;
     border-color: gray;
-    align-items: center;
-    flex: 1;
+    align-items: flex-start;
     justify-items: flex-start;
 }
 
-#eventimage {
+.eventimage {
+    flex: 0 0;
     width: 35%;
-    height: auto;
-    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .infotext {
-    padding: 16px;
-    width: 65%;
-    height: auto;
-    flex-shrink: 2;
+    padding: 0 16px;
+}
+
+.infotext h3 {
+    margin-top: 0;
 }
 
 .video-container {
@@ -194,4 +206,84 @@ footer {
 
 .footerlinks {
     position: right;
+}
+
+@media only screen and (max-width: 750px) {
+
+    body {
+        max-width: 750px;
+    }
+
+    body .desktop {
+    display: none;
+}
+
+body .mobile {
+    display: flex;
+}
+
+.nav div .mobile {
+    display: flex;
+    height: 64px;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.mobile-list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-list li {
+    line-height: 64px;
+}
+
+.mobile-list li img {
+    vertical-align: middle;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.banner .image-container {
+    max-width: 100%;
+    margin: 0;
+    flex-basis: auto;
+
+}
+
+.banner .text-container {
+    margin: 0;
+    padding: 32px 16px;
+    flex-basis: auto;
+}
+
+.banner .text-container h1 {
+    margin: 0 0 16px 0;
+}
+
+.banner .text-container h3 {
+    margin: 16px 0 12px 0;
+}
+
+.banner .text-container .button {
+    margin-top: 12px;
+}
+
+.event {
+    flex-direction: column;
+    align-items: center;
+}
+.eventimage {
+    width: 100%;
+}
 }
